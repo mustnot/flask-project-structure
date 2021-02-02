@@ -2,6 +2,10 @@ import gevent.monkey
 
 gevent.monkey.patch_all()
 
+from config import *
+from common import blueprint_app
+
+
 def create_app():
     from flask import Flask, jsonify
     from flask_cors import CORS
@@ -10,8 +14,8 @@ def create_app():
     CORS(app)
 
     # Register Blueprint APPS
-    from apps import main_app
-    app.register_blueprint(main_app)
+    for module in INSTALL_APPS:
+        app.register_blueprint(blueprint_app(module))
 
     # Register Custom ErrorHandler
     from werkzeug.exceptions import HTTPException
@@ -28,5 +32,6 @@ def create_app():
         return response
 
     return app
+
 
 app = create_app()
