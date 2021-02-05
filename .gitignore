@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/python,venv,vscode
-# Edit at https://www.toptal.com/developers/gitignore?templates=python,venv,vscode
+# Created by https://www.toptal.com/developers/gitignore/api/python,venv
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,venv
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -154,12 +154,4 @@ dmypy.json
 pyvenv.cfg
 pip-selfcheck.json
 
-### vscode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
-
-# End of https://www.toptal.com/developers/gitignore/api/python,venv,vscode
+# End of https://www.toptal.com/developers/gitignore/api/python,venv

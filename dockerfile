@@ -1,8 +1,6 @@
 FROM python:3.9
 
-ENV API_DIR /app/api
-
-WORKDIR ${API_DIR}
+WORKDIR /app
 
 COPY requirements.txt .
 RUN pip install --upgrade pip wheel setuptools \
