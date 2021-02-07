@@ -11,7 +11,7 @@ class DefaultConfig(object):
 
 
 class ProductionConfig(DefaultConfig):
-    ENV = "production2"
+    ENV = "production"
     pass
 
 
