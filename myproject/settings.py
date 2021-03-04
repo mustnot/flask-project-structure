@@ -12,16 +12,13 @@ class DefaultConfig(object):
 
 class ProductionConfig(DefaultConfig):
     ENV = "production"
-    pass
 
 
 class DevelopmentConfig(DefaultConfig):
     ENV = "development"
     DEBUG = True
-    pass
 
 
 class TestingConfig(DefaultConfig):
     ENV = "testing"
     TESTING = True
-    pass
