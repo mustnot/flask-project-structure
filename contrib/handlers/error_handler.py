@@ -1,7 +1,6 @@
 from flask import jsonify
 
 error_messages = {
-    202: "Accepted",
     400: "Bad Request",
     401: "Unauthorized",
     403: "Forbidden",
@@ -14,7 +13,10 @@ error_messages = {
     500: "Internal Server Error",
 }
 
+
 def global_error_handler(error):
+    if 'code' not in dir(error):
+        error.code = 500
     if error.code not in error_messages:
         error.code = 500
 
